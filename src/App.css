@@ -1,0 +1,89 @@
+/* --------- This is CSS Reset Code --------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Inter';
+}
+
+/* --------- Begin your CSS Below here --------- */
+
+header {
+	width: 100vw - 150px;
+	height: 45px;
+	color: white;
+	background-color: rgb(213, 107, 11);
+	display: flex;
+	justify-content: space-between;
+	padding-left: 75px;
+	padding-right: 30px;
+	align-items: center;
+	font-size: 12pt;
+}
+
+header button {
+	background-color: rgb(213,107,11);
+	border: none;
+	color: white;
+	font-size: 12pt;
+	margin-right: 20px;
+}
+
+header button:hover {
+	cursor: pointer;
+
+	border-bottom: 1px solid white;
+}
+
+h1 {
+	color: rgb(213,107,11);
+	font-size: 30pt;
+	font-weight: 800;
+	text-align: center;
+	margin: 16px;
+}
+
+h3 {
+	color: white;
+	text-align: center;
+	font-size: 12pt;
+}
+
+.adBanner {
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 20%;
+	padding-right: 20%;
+}
+
+.blue-btn {
+	background-color: rgb(94, 148, 147);
+	border: none;
+	height: 29px;
+	width: 100px;
+	color: white;
+	margin-top: 15px;
+}
+
+.adBtn {
+	width: 100vw;
+	text-align: center;
+}
+
