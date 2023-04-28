@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import AdBanner from "./AdBanner";
 import axios from "axios";
 import RecipeCard from "../newRecipeComponents/RecipeCard";
-import {BiSearchAlt2} from 'react-icons/bi'
+import { BiSearchAlt2 } from "react-icons/bi";
 
 const HomeScreen = () => {
-  const [recipes, setRecipes] = useState("");
+  const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -14,13 +14,15 @@ const HomeScreen = () => {
     });
   });
 
-  // const recipeDisplay = recipes
-  //   .filter((rec, ind) => {
-  //     return rec.recipe_name.includes(search);
-  //   })
-  //   .map((rec, ind) => {
-  //     return <RecipeCard recipe={rec} index={ind} />;
-  //   });
+  const recipeDisplay = recipes
+    .filter((recipe, index) => {
+      let title = recipe.recipe_name.toLowerCase();
+      let searchParams = search.toLowerCase();
+      return title.includes(searchParams);
+    })
+    .map((recipe, index) => {
+      return <RecipeCard recipe={recipe} />;
+    });
 
   return (
     <div>
@@ -35,7 +37,7 @@ const HomeScreen = () => {
           className="input"
         />
       </div>
-      <RecipeCard />
+      <div className="recipe-results-container">{recipeDisplay}</div>
     </div>
   );
 };

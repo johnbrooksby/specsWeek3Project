@@ -1,47 +1,25 @@
 import React from "react";
+import {useNavigate} from "react-router-dom"
 
-const RecipeCard = () => {
+const RecipeCard = ({recipe}) => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate(`/recipes/${recipe.recipe_id}`);
+  };
   return (
-    <div className="recipe-results-container">
-      <div className="RecipeCard">
-        <div className="recipe-card-container">
-          <img
-          alt="duck pizza"
-            className="recipe-card-img"
-            src="https://images.ctfassets.net/nw5k25xfqsik/zXAi4ShNimrCwcrLBm8Bz/187a1d777f53c0562c5d64bff4e48420/Confit_Foie_Gras_Pizza.jpg"
-          />
-        </div>
-        <h3 className="recipe-card-title">Foie Gras Pizza</h3>
-        <button className="blue-btn" onClick={() => {}}>
-          See More
-        </button>
+    <div className="RecipeCard">
+      <div className="recipe-card-container">
+        <img
+          alt={recipe.recipe_name + " image"}
+          className="recipe-card-img"
+          src={recipe.image_url}
+        />
       </div>
-      <div className="RecipeCard">
-        <div className="recipe-card-container">
-          <img
-          alt="duck pizza"
-            className="recipe-card-img"
-            src="https://images.ctfassets.net/nw5k25xfqsik/zXAi4ShNimrCwcrLBm8Bz/187a1d777f53c0562c5d64bff4e48420/Confit_Foie_Gras_Pizza.jpg"
-          />
-        </div>
-        <h3 className="recipe-card-title">Foie Gras Pizza</h3>
-        <button className="blue-btn" onClick={() => {}}>
-          See More
-        </button>
-      </div>
-      <div className="RecipeCard">
-        <div className="recipe-card-container">
-          <img
-          alt="duck pizza"
-            className="recipe-card-img"
-            src="https://images.ctfassets.net/nw5k25xfqsik/zXAi4ShNimrCwcrLBm8Bz/187a1d777f53c0562c5d64bff4e48420/Confit_Foie_Gras_Pizza.jpg"
-          />
-        </div>
-        <h3 className="recipe-card-title">Foie Gras Pizza</h3>
-        <button className="blue-btn" onClick={() => {}}>
-          See More
-        </button>
-      </div>
+      <h3 className="recipe-card-title">{recipe.recipe_name}</h3>
+      <button className="blue-btn" onClick={handleClick}>
+        See More
+      </button>
     </div>
   );
 };

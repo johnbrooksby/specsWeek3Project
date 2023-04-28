@@ -4,14 +4,18 @@ import { Link } from "react-router-dom";
 
 const AdBanner = () => {
   return (
-    <div
+    <div 
       style={{
         background: `linear-gradient(
           190deg,
           rgba(0, 0, 0, 0.7),
           rgba(0, 0, 0, 0.7)),
           url(${salmon})`,
-        backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundBlendMode: "multiply",
+          backgroundSize: "cover",
+          height: '300px',
       }}
       className="adBanner"
     >
