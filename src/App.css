@@ -86,7 +86,7 @@ h3 {
 	flex-direction: column;
 }
 
-.blue-btn {
+.blue-btn, .addBtn {
 	background-color: rgb(94, 148, 147);
 	border: none;
 	height: 29px;
@@ -95,9 +95,20 @@ h3 {
 	margin-top: 15px;
 }
 
+.addBtn {
+	background-color: rgb(213,107,11);
+
+}
+
 .adBtn {
 	width: 100vw;
 	text-align: center;
+}
+
+.specInputs {
+	display: flex;
+	width: 100%;
+	/* flex-direction: row; */
 }
 
 input {
@@ -192,7 +203,6 @@ body {
 	height: fit-content;
 	display: flex;
 	box-shadow: 0px 3px 3px grey;
-	width: 
 }
 
 .detailMain {
@@ -216,6 +226,40 @@ body {
 	color: black;
 	font-size: 18pt;
 	font-weight: light;
+}
+
+.formHolder {
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+.ingDiv {
+	display: flex;
+	flex-direction: column;
+}
+
+.radioDiv {
+	display: flex;
+	width: 85%;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	justify-content: center;
+	gap: 15px;
+}
+
+.addInput {
+	border: 1px solid grey;
+	height: 30px;
+	width: auto;
+}
+.timeInput {
+	width: 30%;
+	gap: 15px;
 }
 
 footer {
