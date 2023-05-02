@@ -34,42 +34,32 @@ const DetailScreen = () => {
           <h1>{recipe.recipe_name}</h1>
         </div>
       </div>
-      <div className="RecipeCard">
-        <div className="recipe-card-container">
-          <h2>Recipe</h2>
-          <p>Prep Time: {recipe.prep_time}</p>
-          <p>Cook Time: {recipe.cook_time}</p>
-          <p>Serves: {recipe.serves}</p>
-        </div>
+      <div className="detailMain">
+        <div className="detailCard">
+          <div className="detail-card-container">
+          <h1 className="detailTitle">Recipe</h1>
+            <p>Prep Time: {recipe.prep_time}</p>
+            <p>Cook Time: {recipe.cook_time}</p>
+            <p>Serves: {recipe.serves}</p>
+          </div>
 
-        <h3 className="recipe-card-title">Ingredients</h3>
-        {recipe.ingredients &&
-          recipe.ingredients.map((ing, index) => {
-            return (
-              <h4>
-                {ing.quantity} {ing.ingredient}
-              </h4>
-            );
-          })}
-      </div>
-      <div>
-        <p style={{ whiteSpace: "pre-wrap" }}>
-          {recipe.instructions && JSON.parse(recipe.instructions)}
-        </p>
-      </div>
-      {/* <div className="contentBox">
-      <div className="recipeCard">
-        <div className="recipe">
-          Recipe
+          <h1 className="detailTitle">Instructions</h1>
+          {recipe.ingredients &&
+            recipe.ingredients.map((ing, index) => {
+              return (
+                <h4>
+                  {ing.quantity} {ing.ingredient}
+                </h4>
+              );
+            })}
         </div>
-        <div className="ingredients">
-          Ingredients
+        <div className="detailCard">
+          <p style={{ whiteSpace: "pre-wrap" }}>
+            <h1 className="detailTitle">Instructions</h1>
+            {recipe.instructions && JSON.parse(recipe.instructions)}
+          </p>
         </div>
       </div>
-      <div className="recipeCard">
-        Instructions
-      </div>
-    </div> */}
     </div>
   );
 };

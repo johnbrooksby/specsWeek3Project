@@ -6,6 +6,7 @@ const RecipeCard = ({recipe}) => {
 
   const handleClick = () => {
     navigate(`/recipes/${recipe.recipe_id}`);
+    window.scrollTo(0, 0)
   };
   return (
     <div className="RecipeCard">
