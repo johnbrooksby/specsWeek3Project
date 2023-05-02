@@ -97,6 +97,7 @@ h3 {
 
 .addBtn {
 	background-color: rgb(213,107,11);
+	margin-top: -10px;
 
 }
 
@@ -234,6 +235,26 @@ body {
 	justify-content: center;
 }
 
+.radioDiv {
+	display: flex;
+	align-items: center;
+}
+
+.radioLbl {
+	margin-left: -35px;
+}
+
+.nameInput {
+	display: flex;
+	justify-content: space-between;
+}
+
+.specInputs {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
 .ingDiv {
 	display: flex;
 	flex-direction: column;
@@ -252,14 +273,55 @@ form {
 	gap: 15px;
 }
 
+.formSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 150px;
+}
+
+.formBtn {
+	width: 100%;
+	text-align: center;
+}
+
 .addInput {
 	border: 1px solid grey;
 	height: 30px;
 	width: auto;
 }
+
+.ingredients {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.ingredientList {
+	width: 45%;
+	height: fit-content;
+}
+
 .timeInput {
 	width: 30%;
-	gap: 15px;
+}
+
+.ingInput {
+	width: 210px;
+	margin-bottom: 15px;
+	
+}
+
+.textArea {
+	height: 100px;
+	font-size: 13pt;
+	font-family: Inter;
+	padding: 5px;
+}
+
+.textArea::placeholder {
+	font-family: Inter;
+	font-size: 13pt;
 }
 
 footer {
